@@ -1,0 +1,116 @@
+/**
+ * Defines typography for the site.
+ */
+@use "breakpoints";
+
+/**
+ * Font weights for convenience
+ */
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+@mixin versatile-font() {
+	font-family: Montserrat, sans-serif;
+}
+
+@mixin impactful-font() {
+	font-family: Montserrat, sans-serif;
+}
+
+@mixin monospace-font {
+	font-family: Cousine, monospace;
+}
+
+/**
+ * Typography
+ */
+@mixin heading-1() {
+
+	@include impactful-font;
+
+	@media screen and (max-width: breakpoints.$extra-wide) {
+
+		font-size: 2.6rem;
+		font-weight: $bold;
+		line-height: 1.16;
+		margin-bottom: 32px;
+	}
+
+	@media screen and (min-width: breakpoints.$extra-wide) {
+		font-size: 4rem;
+		font-weight: $bold;
+		line-height: 1.16;
+		margin-bottom: 32px;
+	}
+}
+
+@mixin heading-2() {
+
+	@include impactful-font;
+
+	@media screen and (max-width: breakpoints.$extra-wide) {
+		font-size: 2.55rem;
+		font-weight: $bold;
+		line-height: 1.16;
+		margin: 16px 0 32px;
+	}
+
+	@media screen and (min-width: breakpoints.$extra-wide) {
+		font-size: 3rem;
+		font-weight: $bold;
+		line-height: 1.16;
+		margin: 16px 0 32px;
+	}
+}
+
+@mixin body-1() {
+
+	@include versatile-font;
+
+	@media screen and (max-width: breakpoints.$extra-wide) {
+		font-size: 1rem;
+		font-weight: $medium;
+		letter-spacing: 0.025em;
+		line-height: 1.6;
+	}
+
+	@media screen and (min-width: breakpoints.$extra-wide) {
+		font-size: 1.25rem;
+		font-weight: $medium;
+		letter-spacing: 0.025em;
+		line-height: 1.6;
+	}
+}
+
+@mixin overline {
+
+	@include monospace-font;
+
+	@media screen and (max-width: breakpoints.$extra-wide) {
+		font-size: 1rem;
+		font-weight: $bold;
+		line-height: 1;
+	}
+
+	@media screen and (min-width: breakpoints.$extra-wide) {
+		font-size: 1.25rem;
+		font-weight: $bold;
+		line-height: 1;
+	}
+}
+
+@mixin button-1() {
+
+	@include versatile-font;
+	font-size: 1.25rem;
+	font-weight: $medium;
+}
+
+@mixin marginal-1() {
+
+	@include versatile-font;
+	font-size: 1.75rem;
+	font-weight: $bold;
+}

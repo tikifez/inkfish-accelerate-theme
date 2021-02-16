@@ -1,0 +1,73 @@
+@use "shared/colors";
+@use "shared/_type";
+
+/**
+ * Buttons
+ */
+.wp-block-button {
+	margin-right: var(--gutter);
+
+	.wp-block-button__link {
+		border: 1px solid;
+		box-sizing: border-box;
+		color: inherit;
+
+		&:focus {
+			// The focus state is indicated by the color change so outline not needed.
+			outline: none;
+		}
+	}
+}
+
+/**
+ * Outline variant
+ */
+.wp-block-button.is-style-outline {
+
+	.wp-block-button__link {
+		background-color: transparent;
+		border-color: currentColor;
+		border-radius: 36px;
+		padding: 16px 28px;
+	}
+
+}
+
+/**
+ * Text button variant
+ */
+.wp-block-button.is-style-text {
+
+	.wp-block-button__link {
+		background-color: transparent;
+		border-color: transparent;
+		color: inherit;
+		display: flex;
+		justify-content: center;
+		padding: 16px 0;
+		position: relative;
+		width: auto;
+
+		&::after {
+			background: currentColor;
+			bottom: 16px;
+			content: "";
+			height: 2px;
+			position: absolute;
+			width: 100%;
+		}
+
+	}
+}
+
+.is-dark .wp-block-button {
+
+	.wp-block-button__link {
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: var(--thm-dark-accent-color);
+		}
+	}
+}

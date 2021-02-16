@@ -1,0 +1,22 @@
+@use "shared/colors";
+
+#footer {
+	align-items: center;
+	background: var(--thm-footer-background);
+	color: var(--thm-footer-color);
+	display: flex;
+	height: var(--footer-height);
+	justify-content: center;
+	width: 100%;
+}
+
+
+#imprint {
+	display: inline-block;
+	height: 64px;
+
+	img {
+		height: 100%;
+		object-fit: contain;
+	}
+}

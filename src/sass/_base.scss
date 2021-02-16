@@ -1,0 +1,106 @@
+@use "shared/colors";
+@use "shared/type";
+@use "shared/breakpoints";
+@use "shared/metrics";
+
+/**
+ * Base
+ */
+:root {
+	--gutter: 32px;
+	--gutter-and-half: 48px;
+	--gutter-and-quarter: 40px;
+	--footer-background: #{colors.$black};
+	--footer-color: #{colors.$white};
+	--header-background: #{colors.$black};
+	--header-color: #{colors.$white};
+	--menu-background: #{colors.$black};
+	--menu-color: #{colors.$white};
+	--accent-color: #{colors.$blue};
+	--background-color: #{colors.$white};
+	--text-color: #{colors.$text-color};
+	--content-constrain-width: 1488px;
+	--thm-dark-accent-color: #{colors.$green};
+	--thm-dark-background-color: #{colors.$gradient-dark-start};
+	--thm-dark-text-color: #{colors.$white};
+	--gutter-double: 64px;
+	--gutter-double-and-quarter: 72px;
+	--gutter-half: 16px;
+	--footer-height: 126px;
+	--header-height: 192px;
+	--header-logo-height: 40px;
+	--footer-text: #{colors.$white};
+	--header-text: #{colors.$white};
+
+
+	@media screen and (max-width: breakpoints.$extra-wide) {
+		--module-content-width: auto;
+		--header-gutter-top: 24px;
+		--module-height: 848px;
+	}
+
+	@media screen and (min-width: breakpoints.$extra-wide) {
+		--module-content-width: 31.5rem;
+		--header-gutter-top: 64px;
+		--module-height: 848px;
+	}
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+	@include type.versatile-font;
+	@include type.body-1;
+
+	background: var(--background-color);
+	color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	@include type.impactful-font;
+}
+
+h2 {
+
+	@include type.heading-2;
+}
+
+a {
+	transition: color 150ms ease-in;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.overline {
+
+	@include type.overline;
+}
+
+.is-dark {
+	background: var(--thm-dark-background-color);
+	color: var(--thm-dark-text-color);
+
+	a {
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: var(--thm-dark-accent-color);
+		}
+	}
+}

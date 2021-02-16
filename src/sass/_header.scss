@@ -1,0 +1,57 @@
+@use "shared/breakpoints";
+@use "shared/colors";
+@use "shared/metrics";
+
+:root {
+
+	@media screen and (max-width: breakpoints.$extra-wide) {
+		--header-gutter-top: 24px;
+
+	}
+
+	@media screen and (min-width: breakpoints.$extra-wide) {
+		--header-gutter-top: 56px;
+	}
+}
+
+#header {
+	background: var(--thm-header-background);
+	background: linear-gradient(to bottom, #{rgba(colors.$dark-blue, 0.4)} 0%, #{rgba(colors.$dark-blue, 0.2)}  60%, #{rgba(colors.$gradient-dark-start, 0)} 90%);
+	color: var(--thm-header-color);
+	height: var(--header-height);
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
+
+.header-wrapper {
+	margin: auto;
+	max-width: var(--content-constrain-width);
+	width: 100%;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding-top: var(--header-gutter-top);
+	position: relative;
+
+	@media screen and (max-width: breakpoints.$extra-wide) {
+		margin: 0 metrics.safe-area-right() 0 metrics.safe-area-left();
+	}
+
+	@media screen and (min-width: breakpoints.$extra-wide) {
+		margin: 0 var(--gutter-and-half) 0 var(--gutter-and-half);
+	}
+}
+
+#logo {
+	display: inline-block;
+	height: var(--header-logo-height);
+
+	img {
+		height: 100%;
+		object-fit: contain;
+	}
+}

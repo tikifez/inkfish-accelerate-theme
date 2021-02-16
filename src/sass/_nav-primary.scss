@@ -1,0 +1,168 @@
+@use "shared/type";
+
+/**
+ * Primary navigation
+ */
+
+$durationContent: 200ms; // Reflected in nav-control.js.
+$durationToggle: 200ms; // Reflected in nav-control.js.
+
+.nav-wrapper {
+	position: absolute;
+	right: 0;
+	top: calc(var(--header-gutter-top) + var(--gutter) * -1);
+}
+
+.nav-primary {
+
+	@include type.marginal-1;
+	padding: var(--gutter);
+
+	.nav-content {
+		background: var(--menu-background);
+		color: var(--menu-color);
+		display: none;
+		opacity: 0;
+		padding: var(--gutter-and-half) var(--gutter) var(--gutter);
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: opacity $durationContent ease-in;
+		width: 200px;
+		z-index: -1;
+
+		a {
+
+			&:link,
+			&:visited {
+				color: currentColor;
+				text-decoration: none;
+			}
+
+		}
+	}
+
+	.nav-toggle {
+		align-items: center;
+		background-color: transparent;
+		border-style: none;
+		cursor: pointer;
+		display: flex;
+		height: 32px;
+		margin-left: auto;
+		padding: 0.25em 0.3em;
+		position: relative;
+		width: 32px;
+		z-index: 0;
+
+		.ends::before,
+		.ends::after,
+		.middle {
+			background: var(--menu-color);
+			border-radius: 2px;
+			content: "";
+			height: 4px;
+			left: 0;
+			position: absolute;
+			transition:
+				border-radius $durationToggle ease-in,
+				opacity $durationToggle ease-in,
+				transform $durationToggle ease-in,
+				height $durationToggle ease-in,
+				width $durationToggle ease-in,
+				top $durationToggle ease-in,
+				bottom $durationToggle ease-in,
+				left $durationToggle ease-in;
+		}
+
+		.ends,
+		.middle {
+			left: 0;
+			position: absolute;
+		}
+
+		.ends {
+			height: 32px;
+
+			&::before,
+			&::after {
+				width: 24px;
+			}
+
+			&::before {
+				top: 2px;
+			}
+
+			&::after {
+				top: 26px;
+			}
+		}
+
+		.middle {
+			height: 4px;
+			width: 32px;
+		}
+
+
+	}
+
+	.menu {
+		padding: 0;
+
+		li {
+			list-style-type: none;
+		}
+
+		li + li {
+			margin-top: var(--gutter-and-quarter);
+		}
+	}
+}
+
+/**
+ * Active state
+ */
+.nav-primary.is-active {
+
+	.nav-content {
+		opacity: 1;
+	}
+
+
+	.nav-toggle {
+		// TODO: Animation could be smoothed out with keyframes.
+		.ends::before,
+		.ends::after,
+		.middle {
+			border-radius: 0;
+		}
+
+		.middle {
+			left: 16px;
+			opacity: 0;
+			transform-origin: center;
+			width: 0;
+		}
+
+		.ends {
+			left: -2px;
+
+			&::before,
+			&::after {
+				height: 8px;
+				left: calc(50% - 2px);
+				top: 12px;
+				width: 40px;
+			}
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+@function safe-area-left() {
+
+	@return calc(max(22px, env(safe-area-inset-left)));
+}
+
+@function safe-area-right() {
+
+	@return calc(max(22px, env(safe-area-inset-right)));
+}
