@@ -1,6 +1,7 @@
 # Inkfish Accelerate
 
 License: GNU General Public License v2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Inkfish Accelerate is an experimental block-based theme for WordPress utilizing
