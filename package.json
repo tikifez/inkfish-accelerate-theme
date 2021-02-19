@@ -1,7 +1,7 @@
 {
-  "name": "inkfish-smb",
+  "name": "inkfish-accelerate-theme",
   "version": "1.0.0",
-  "description": "A theme for small businesses and sole proprietors.",
+  "description": "A block-based theme utilizing experimental theme features.",
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tikifez/inkfish-smb.git"
+    "url": "https://github.com/tikifez/inkfish-accelerate-theme.git"
   },
   "keywords": [
     "WordPress",
@@ -59,9 +59,9 @@
   "author": "Xristopher Anderton",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/tikifez/inkfish-smb/issues"
+    "url": "https://github.com/tikifez/inkfish-accelerate-theme/issues"
   },
-  "homepage": "https://github.com/tikifez/inkfish-smb",
+  "homepage": "https://github.com/tikifez/inkfish-accelerate-theme",
   "engines": {
     "node": ">= 12.0.0",
     "npm": ">= 6.9.0"
@@ -70,6 +70,7 @@
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@ixkaito/imagemin": "^0.1.0",
+    "@types/jquery": "^3.5.5",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
     "@wordpress/eslint-plugin": "^8.0.2",

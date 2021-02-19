@@ -1,5 +1,6 @@
 import $ from 'jquery';
+import navigation from "./navigation.ts";
 
 $( () => {
-	$( 'body' ).css( 'background' );
+	navigation();
 } );

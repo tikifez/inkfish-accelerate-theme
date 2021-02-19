@@ -10,7 +10,7 @@
  *
  * @since 1.0.0
  */
-function xa_smb_add_block_styles() {
+function nkaccelerate_add_button_styles() {
 	register_block_style(
 		'core/button',
 		array(

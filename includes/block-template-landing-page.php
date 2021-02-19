@@ -1,19 +1,10 @@
 <?php
 /**
- * Adds block templates
+ * Front page block template
  *
  * @since 1.0.0
  */
 
-/**
- * Adds block templates
- *
- * @since 1.0.0
- */
-function xa_smb_add_block_templates() {
-	add_action( 'init', 'xa_smb_front_page_template' );
-
-}
 
 /**
  * Front page block template
@@ -21,8 +12,8 @@ function xa_smb_add_block_templates() {
  * @since 1.0.0
  */
 
-function xa_smb_front_page_template() {
-	$post_type_object           = get_post_type_object( 'page' );
+function nkaccelerate_landing_page_template() {
+	$post_type_object           = get_post_type_object( 'landing' );
 	$post_type_object->template = array(
 		array( 'core/cover' ),
 		array(
