@@ -1,4 +1,4 @@
-# Inkfish Accelerate 🦑💨
+# 🦑💨 Inkfish Accelerate 
 
 License: GNU General Public License v2 or later
 
