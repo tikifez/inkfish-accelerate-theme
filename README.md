@@ -3,7 +3,8 @@
 Inkfish Accelerate is an experimental block-based theme for WordPress utilizing
 [full site editing](https://make.wordpress.org/design/handbook/focuses/full-site-editing/). 
 Goals include implementing block-based themes with semantic HTML, meeting a11y 
-and i18n concerns, and overall ease-of-use.
+and i18n concerns, block templates for specific post types, and overall 
+ease-of-use.
 
 License: GNU General Public License v2 or later
 
