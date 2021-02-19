@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 For now, the [Gutenberg plugin](https://github.com/WordPress/gutenberg)
 is required to enable this theme, but full site editing is planned for [release 
 in WP core](https://make.wordpress.org/updates/2021/01/21/big-picture-goals-2021/) 
-in v5.8.
+in WordPress v5.8.
 
 ## Gratitude
 
